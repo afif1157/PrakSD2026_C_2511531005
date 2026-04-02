@@ -40,7 +40,7 @@ public class JamDriver2_2511531005 {
 		System.out.println("jam 1 detik berikutnya : " + jNext);
 		
 		Jam_2511531005 jPrev = j1.prevSeconds();
-		System.out.println("jam 1 detik sebelumnya : " + jNext);
+		System.out.println("jam 1 detik sebelumnya : " + jPrev);
 		
 		//operasi penjumlahan jam
 		Jam_2511531005 jHasilPlus = j1.plus(j2);

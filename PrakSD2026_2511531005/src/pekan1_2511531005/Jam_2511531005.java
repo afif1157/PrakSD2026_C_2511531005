@@ -85,6 +85,6 @@ public class Jam_2511531005 {
 	}
 	
 	public String toString() {
-		return String.format("%2d:%2d:%2d:", hh, mm, ss);
+		return String.format("%2d:%2d:%2d", hh, mm, ss);
 	}    
 }  
