@@ -1,4 +1,4 @@
-package pekan3_2511531005;
+package pekan3_2511531005;  
 
 public class stackArray_2511531005 {
 	static final int MAX_1005 = 1000;

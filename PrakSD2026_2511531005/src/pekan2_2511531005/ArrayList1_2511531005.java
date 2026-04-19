@@ -1,7 +1,7 @@
-package pekan2_2511531005;
-import java.util.*;
+package pekan2_2511531005;  
+import java.util.ArrayList;
 public class ArrayList1_2511531005 {
-
+      
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		

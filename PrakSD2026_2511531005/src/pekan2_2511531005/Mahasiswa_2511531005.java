@@ -15,4 +15,4 @@ public class Mahasiswa_2511531005 {
 	public String toString() {
 		return "NIM: " + nim + " Nama: "+ nama+" Prodi: "+prodi;
 	}
-}
+}    

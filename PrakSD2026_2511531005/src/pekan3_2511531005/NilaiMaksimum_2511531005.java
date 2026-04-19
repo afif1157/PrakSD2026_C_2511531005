@@ -1,4 +1,4 @@
-package pekan3_2511531005;
+package pekan3_2511531005;   
 import java.util.*;
 public class NilaiMaksimum_2511531005 {
 
@@ -12,7 +12,7 @@ public class NilaiMaksimum_2511531005 {
 			maxvalue_1005 = Math.max(maxvalue_1005, next_1005);
 		}
 		while (!backup.isEmpty()) {
-			s.push(backup.pop());
+			s.push(backup.pop());  
 		}
 		return maxvalue_1005;
 	}
