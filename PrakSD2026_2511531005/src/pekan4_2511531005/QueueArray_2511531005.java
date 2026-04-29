@@ -28,7 +28,7 @@ public class QueueArray_2511531005 {
 		this.array[this.rear] = item;
 		this.size = this.size + 1;
 		System.out.println(item + " endqueue to queue");
-	}
+	}  
 	
 	int dequeue_1005() {
 		if(isEmpty_1005(this))
@@ -54,7 +54,7 @@ public class QueueArray_2511531005 {
 	void display_1005() {
 		int i;
 		if(front == rear) {
-			System.out.printf("\nAntrian kosong\n");
+			System.out.printf("\nAntrian kosong\n");  
 			return;
 		}
 		
