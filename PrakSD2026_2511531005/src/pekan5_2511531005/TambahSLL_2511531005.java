@@ -7,7 +7,7 @@ public class TambahSLL_2511531005 {
 		new_node.next = head_1005;
 		return new_node;
 	}
-	
+	 
 	public static NodeSLL_2511531005 insertAtEnd_1005(NodeSLL_2511531005 head_1005, int value_1005) {
 		NodeSLL_2511531005 newNode = new NodeSLL_2511531005(value_1005);
 		if(head_1005 == null) {

@@ -9,7 +9,7 @@ public class PencarianSLL_2511531005 {
 					return true;
 				curr = curr.next;
 			}
-			return false;
+			return false;  
 	}
 	public static void travelsal_1005 (NodeSLL_2511531005 head_1005) {
 		NodeSLL_2511531005 curr = head_1005;

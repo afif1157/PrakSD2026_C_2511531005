@@ -52,7 +52,7 @@ public class HapusSLL_2511531005 {
 			System.out.println("data tidak ada");
 		}
 		
-		return head_1005; // ❗ ini tadi hilang
+		return head_1005; 
 	}
 	
 	public static void printList_1005(NodeSLL_2511531005 head_1005) {
