@@ -2,81 +2,81 @@ package pekan4_2511531005;
 import java.util.*;
 public class AntrianLoket_2511531005 {
 	
-	private int front, rear, max;
-	private String [] queue;
+	private int front_1005, rear_1005, max_1005;
+	private String [] queue_1005;
    
 	public AntrianLoket_2511531005(int max) {
-		this.max = max;
-		queue = new String[max];
-		front = -1;
-		rear = -1;
+		this.max_1005 = max;
+		queue_1005= new String[max];
+		front_1005 = -1;
+		rear_1005 = -1;
 	}
 	
-	boolean isEmpty() {
-		return front == -1;
+	boolean isEmpty_1005() {
+		return front_1005 == -1;
 	}
 	
-	boolean isFull() {
-		return rear == max -1;
+	boolean isFul_1005l() {
+		return rear_1005 == max_1005 -1;
 	}
 	
-	void enqueue(String nama) {
-		if (isFull()) {
+	void enqueue_1005(String nama) {
+		if (isFul_1005l()) {
 			System.out.println("antrian penuh!");
 		}else {
-			if (front == -1) front = 0;
-			rear++;
-			queue[rear] = nama;
+			if (front_1005 == -1) front_1005 = 0;
+			rear_1005++;
+			queue_1005[rear_1005] = nama;
 			System.out.println("data berhasil ditambahkan ke antrian");
 		}
 	}
 	
-	void dequeue() {
-		if (isEmpty()) {
+	void dequeue_1005() {
+		if (isEmpty_1005()) {
 			System.out.println("antrian kosong!");
 		}else {
-			String served = queue[front];
-			if (front == rear) {
-				front = -1;
-				rear = -1;
+			String served = queue_1005[front_1005];
+			if (front_1005 == rear_1005) {
+				front_1005 = -1;
+				rear_1005 = -1;
 			}else {
-				front++;
+				front_1005++;
 			}
 			System.out.println(served + " telah dilayani");
 		}
 	}
 	
 	void display() {
-		if(isEmpty()) {
+		if(isEmpty_1005()) {
 			System.out.println("antrian kosong!");
 		}else {
 			System.out.println("isi antrian : ");
 			int nomor =1;
-			for (int i = front ; i <= rear ; i++) {
-				System.out.println(nomor +". "+ queue[i]);
+			for (int i = front_1005 ; i <= rear_1005 ; i++) {
+				System.out.println(nomor +". "+ queue_1005[i]);
 				nomor++;
 			}
 		}
 	}
 	
 	void reverse() {
-		if(isEmpty()) {
+		if(isEmpty_1005()) {
 			System.out.println("antrian kosong!");
 			return;
 		}
-		int i = front; 
-		int j = rear;
+		int i = front_1005; 
+		int j = rear_1005;
 		while(i<j) {
-			String temp = queue[i];
-			queue[i] = queue[j];
-			queue[j] = temp;
+			String temp = queue_1005[i];
+			queue_1005[i] = queue_1005[j];
+			queue_1005[j] = temp;
 			i++;
 			j--;
 		}
 		System.out.println("isi antrian :");
 		int nomor = 1;	
-		for (int k = front ; k <= rear; k++){
-			System.out.println(nomor + ". " + queue[k]);
+		for (int k = front_1005 ; k <= rear_1005; k++){
+			System.out.println(nomor + ". " + queue_1005[k]);
 			nomor++;
 		}
 	}
@@ -104,10 +104,10 @@ public class AntrianLoket_2511531005 {
 			case 1:
 				System.out.println("masukkan nama pelanggan : ");
 				String nama = input.nextLine();
-				antrian.enqueue(nama);
+				antrian.enqueue_1005(nama);
 				break;
 			case 2:
-				antrian.dequeue();
+				antrian.dequeue_1005();
 				break;
 			case 3:
 				antrian.display();
