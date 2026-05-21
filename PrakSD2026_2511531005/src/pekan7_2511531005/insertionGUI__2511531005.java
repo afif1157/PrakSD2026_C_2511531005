@@ -17,6 +17,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
 public class insertionGUI__2511531005 extends JFrame {
@@ -35,10 +36,6 @@ public class insertionGUI__2511531005 extends JFrame {
 	private int stepCount_1005 = 1;
 	
 	
-
-	
-	
-
 	/**
 	 * Create the frame.
 	 */
@@ -66,7 +63,7 @@ public class insertionGUI__2511531005 extends JFrame {
 		controlPanel.add(stepButton_1005);
 		controlPanel.add(resetButton_1005);
 		
-		stepArea_1005 = new JTextArea(15, 30);
+		stepArea_1005 = new JTextArea(8, 40);
 		stepArea_1005.setEditable(false);
 		stepArea_1005.setFont(new Font ("Monospaced", Font.PLAIN, 14));
 		JScrollPane scrollPane = new JScrollPane(stepArea_1005);
@@ -101,7 +98,7 @@ public class insertionGUI__2511531005 extends JFrame {
 		i = 1;
 		stepCount_1005 = 1;
 		sorting_1005 = true;
-		setButton_1005.setEnabled(true);
+		stepButton_1005.setEnabled(true);
 		stepArea_1005.setText("");
 		panelArray_1005.removeAll();
 		labelArray_1005 = new JLabel[array_1005.length];
@@ -177,7 +174,13 @@ public class insertionGUI__2511531005 extends JFrame {
 			if (k < arr_1005.length - 1) sb_1005.append(", ");
 		}
 		return sb_1005.toString();
-		
+	}
+	
+	public static void main (String[] args) {
+		SwingUtilities.invokeLater(() -> {
+			insertionGUI__2511531005  gui = new insertionGUI__2511531005();
+			gui.setVisible(true);
+		});
 	}
 	
 	
