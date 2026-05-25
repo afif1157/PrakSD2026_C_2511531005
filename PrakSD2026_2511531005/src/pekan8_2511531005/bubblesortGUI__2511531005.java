@@ -123,31 +123,45 @@ public class bubblesortGUI__2511531005 extends JFrame {
 	}
 	
 	public void performStep_1005() {
-		if(i < array_1005.length && sorting_1005) {
-			int key_1005 = array_1005[i];
-			j = i - 1;
+		if (!sorting_1005 || i >= array_1005.length -1) {
+			sorting_1005 = false;
+			stepButton_1005.setEnabled(false);
+			JOptionPane.showMessageDialog(this, "sorting selesai!");
+			return;
+		}
+		resetHightlights_1005();
+		StringBuilder stepLog = new StringBuilder();
+		labelArray_1005[j].setBackground(Color.CYAN);
+		labelArray_1005[j+1].setBackground(Color.CYAN);
+		
+		if(array_1005[j] > array_1005[j+1]) {
+			int temp_1005 = array_1005[j];
+			array_1005[j] = array_1005[j + 1];
+			array_1005[j + 1] = temp_1005;
+			labelArray_1005[j].setBackground(Color.RED);
+			labelArray_1005[j + 1].setBackground(Color.RED);
+			stepLog.append("langkah").append(stepCount_1005).append(": menukar eleman ke-")
+			.append(j).append(" (").append(array_1005[j+1]).append(") dengan elemen ke-")
+			.append(j+1).append("(").append(array_1005[j]).append(")\n");
+		}else{
+			stepLog.append("langkah ").append(stepCount_1005).append(": tidak ada pertukaran ke-")
+			.append(j).append(" dan ke-").append(j+1).append("\n");
 			
-			StringBuilder stepLog_1005 = new StringBuilder();
-			stepLog_1005.append("langkah ").append(stepCount_1005).append(": memasukkan ").append(key_1005).append("\n");
-			
-			while(j >= 0 && array_1005[j] > key_1005) {
-				array_1005[j + 1] = array_1005[j];
-				j--;
-			}
-			array_1005[j + 1] = key_1005;
-			
-			updateLabels_1005();
-			stepLog_1005.append("hasil : ").append(arrayToString_1005(array_1005)).append("\n\n");
-			stepArea_1005.append(stepLog_1005.toString());
-			
+		stepLog.append("hasil : ").append(arrayToString_1005(array_1005)).append("\n\n");
+		stepArea_1005.append(stepLog.toString());
+		updateLabels_1005();
+		j++;
+		if(j >= array_1005.length - i -1 ) {
+			j = 0;
 			i++;
-			stepCount_1005++;
-			
-			if(i == array_1005.length) {
-				sorting_1005 = false;
-				stepButton_1005.setEnabled(false);
-				JOptionPane.showMessageDialog(this, "sorting selesai!");
-			}
+		stepCount_1005++;
+		if(i >= array_1005.length - 1) {
+			sorting_1005 = false;
+			stepButton_1005.setEnabled(false);
+			JOptionPane.showMessageDialog(this, "sorting selesai");
+		}
+		}
+		
 		}
 	}
 	
